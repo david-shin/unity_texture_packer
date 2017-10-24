@@ -51,18 +51,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\Connection.cs" />
-     <Compile Include="Assets\Editor\ConnectionPoint.cs" />
-     <Compile Include="Assets\Editor\Node.cs" />
-     <Compile Include="Assets\Editor\NodeBasedEditor.cs" />
-     <Compile Include="Assets\Editor\NodeInput.cs" />
-     <Compile Include="Assets\Editor\NodeOutput.cs" />
-     <Compile Include="Assets\Editor\NodeStyle.cs" />
- <Reference Include="UnityEngine.UIAutomation">
- <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+     <Compile Include="Assets\Editor\Core\Connection.cs" />
+     <Compile Include="Assets\Editor\Core\ConnectionPoint.cs" />
+     <Compile Include="Assets\Editor\Core\Editor.cs" />
+     <Compile Include="Assets\Editor\Core\EventHandlers.cs" />
+     <Compile Include="Assets\Editor\Core\Utils.cs" />
+     <Compile Include="Assets\Editor\Nodes\Node.cs" />
+     <Compile Include="Assets\Editor\Nodes\NodeInput.cs" />
+     <Compile Include="Assets\Editor\Nodes\NodeOutput.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UIAutomation">
- <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
@@ -73,18 +80,6 @@
  <Reference Include="nunit.framework">
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Networking">
- <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Timeline">
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
@@ -93,6 +88,12 @@
  </Reference>
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UIAutomation">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.GoogleAudioSpatializer">
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
@@ -145,6 +146,10 @@
  <Reference Include="UnityEditor.iOS.Extensions.Common">
  <HintPath>/Applications/Unity 2017/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{23825C4A-EA55-74A0-5FCD-45C1388E0DAA}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
